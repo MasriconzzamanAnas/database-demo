@@ -1,0 +1,6 @@
+1. Environment
+2. How to Create And Drop Database  
+3. How to Create And Drop Table  
+4. Create a POS Database Table With Relationship 
+        - What is ERD Diagram 
+        - Table Sequence-> "users"->"categories"->"products"->"customers"->"invoice"->"invoice_products"

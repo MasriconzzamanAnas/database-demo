@@ -1,0 +1,2 @@
+sequence: 
+	- supplier -> part -> supplier_part -> procuct -> product_part -> employee -> assembling -> sales_person -> customer ->order -> orderline  
