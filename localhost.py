@@ -9,3 +9,6 @@ print('hello world')
 #     print('Done')
 
 #os.mkdir('salesDetails')
+
+# with open('bank.sql','w') as file:
+#     print('done')
