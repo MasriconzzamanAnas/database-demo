@@ -43,5 +43,5 @@ SELECT DATE_ADD(NOW(), INTERVAL 5 MINUTE) as future_time
 
 SELECT DATE_SUB(NOW(), INTERVAL 5 MINUTE) as past_time
 
-CURDATE() as current_date, CURTIME() as current_time, NOW() as current_datetime
+SELECT DATEDIFF("2024-10-22", "2003-07-28") AS timedeffernce
    
