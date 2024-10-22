@@ -1,4 +1,4 @@
--- Active: 1728650081456@@127.0.0.1@3306@damo_rabbil_vai
+-- Active: 1728650081456@@127.0.0.1@3306@user
 --- starting Rabbile vai ar class prectise 
 SELECT 'Hello world' as msg, 3+2 as sub, 3-2 as mai
 
@@ -44,4 +44,18 @@ SELECT DATE_ADD(NOW(), INTERVAL 5 MINUTE) as future_time
 SELECT DATE_SUB(NOW(), INTERVAL 5 MINUTE) as past_time
 
 SELECT DATEDIFF("2024-10-22", "2003-07-28") AS timedeffernce
-   
+
+--- simple select query using Alias
+
+SELECT a.name FROM categories a 
+SELECT b.firstName FROM users b
+
+-- joining Query users-> a categories ->b
+
+SELECT a.firstName, a.lastName, a.id, b.name, b.id FROM users a INNER JOIN  categories b ON a.id=b.user_id
+
+SELECT a.firstName, a.lastName, a.id, b.name  FROM users a LEFT JOIN categories b ON a.id=b.user_id
+
+SELECT a.firstName, a.lastName, b.name, b.id FROM users a RIGHT JOIN categories b ON a.id=b.user_id
+
+select a.firstName, a.lastName, b.name FROM users a CROSS JOIN categories b  ON a.id=b.user_id
