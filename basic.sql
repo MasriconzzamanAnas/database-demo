@@ -59,3 +59,5 @@ SELECT a.firstName, a.lastName, a.id, b.name  FROM users a LEFT JOIN categories 
 SELECT a.firstName, a.lastName, b.name, b.id FROM users a RIGHT JOIN categories b ON a.id=b.user_id
 
 select a.firstName, a.lastName, b.name FROM users a CROSS JOIN categories b  ON a.id=b.user_id
+
+
