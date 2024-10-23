@@ -24,7 +24,7 @@ SELECT LOWER("HELLO WORLD") as lower_case
 
 SELECT REVERSE("HELLO world") AS reverse_case
 
--- conditional statements
+-- conditional statements / if else statements
 SELECT
     CASE
         WHEN @num1 > @num2 THEN @num1
@@ -42,6 +42,8 @@ SELECT CURTIME() AS curnt_time
 SELECT DATE_ADD(NOW(), INTERVAL 5 MINUTE) as future_time
 
 SELECT DATE_SUB(NOW(), INTERVAL 5 MINUTE) as past_time
+
+SELECT DATE_FORMAT(NOW(), "%Y, %M, %D") AS format_date
 
 SELECT DATEDIFF("2024-10-22", "2003-07-28") AS timedeffernce
 
