@@ -1,3 +1,4 @@
+-- Active: 1728650081456@@127.0.0.1@3306@demo_niamor_vai
 -- 1. Select All Rows from the employees table
 SELECT * FROM employees;
 
