@@ -1,4 +1,4 @@
--- Active: 1728650081456@@127.0.0.1@3306@user
+-- Active: 1728650081456@@127.0.0.1@3306@damo_rabbil_vai
 --- starting Rabbile vai ar class prectise 
 SELECT 'Hello world' as msg, 3+2 as sub, 3-2 as mai
 
@@ -61,5 +61,32 @@ SELECT a.firstName, a.lastName, a.id, b.name  FROM users a LEFT JOIN categories 
 SELECT a.firstName, a.lastName, b.name, b.id FROM users a RIGHT JOIN categories b ON a.id=b.user_id
 
 select a.firstName, a.lastName, b.name FROM users a CROSS JOIN categories b  ON a.id=b.user_id
+
+-- there i try to count total selce 1st and 2nd i try to separate all the selce by the peyment_status like pending and successfull 
+SELECT 
+    SUM(b.payable) AS total_selce,
+    COUNT(
+        CASE 
+            WHEN b.payment_status = "Pending" THEN 1  
+            ELSE  1
+        END
+    )AS payment_pending,
+    COUNT(
+        CASE 
+            WHEN b.payment_status = "Successful" THEN 1 
+            ELSE  1
+        END
+    ) AS payment_successful
+FROM 
+    users a 
+INNER JOIN 
+    invoices b 
+ON 
+    a.id = b.user_id
+WHERE 
+    a.id = 1
+
+
+
 
 
