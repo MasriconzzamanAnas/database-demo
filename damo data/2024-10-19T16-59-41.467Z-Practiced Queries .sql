@@ -40,3 +40,7 @@ HAVING AVG(salary) > 60000;
 
 -- 11. Distinct Values (select distinct designations from the employees table)
 SELECT DISTINCT designation FROM employees;
+
+
+
+

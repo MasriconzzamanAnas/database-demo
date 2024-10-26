@@ -10,3 +10,5 @@ SELECT * FROM customer WHERE (CITY = 'Salem' AND `POSTAL_CODE` IN ('03079','0308
 --- Data from multiple tables according to different conditions
 SELECT customer.cust_id, individual.first_name, individual.last_name, customer.postal_code, customer.address FROM customer, individual WHERE city = 'salem' AND customer.CUST_ID = individual.CUST_ID
 
+
+
