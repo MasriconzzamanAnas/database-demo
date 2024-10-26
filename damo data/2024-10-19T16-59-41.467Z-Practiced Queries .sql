@@ -44,3 +44,8 @@ SELECT DISTINCT designation FROM employees;
 
 
 
+
+-- 2.Select Specific Columns
+-- 3.Where Clause
+-- 4.Order By Clause
+SELECT * FROM employees

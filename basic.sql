@@ -64,27 +64,12 @@ select a.firstName, a.lastName, b.name FROM users a CROSS JOIN categories b  ON 
 
 -- there i try to count total selce amount 1st and 2nd i try to separate all the selce by the peyment_status like pending and successfull 
 SELECT 
-    (SELECT SUM(payable) AS total_selce_taka FROM invoices WHERE user_id= 1 ),
-    COUNT(
-        CASE 
-            WHEN b.payment_status = "Pending" THEN 1 
-            ELSE  1
-        END
-    )AS payment_pending,
-    COUNT(
-        CASE 
-            WHEN b.payment_status = "Success" THEN 1
-            ELSE  1
-        END
-    ) AS payment_successful
-FROM 
-    users a 
-INNER JOIN 
-    invoices b 
-ON 
-    a.id = b.user_id
-WHERE 
-    b.user_id = 1
+    SUM(payable) AS total_amount,
+    COUNT(*) AS total_records,
+    SUM(CASE WHEN payment_status = 'pending' THEN 1 ELSE 0 END) AS pending_count,
+    SUM(CASE WHEN payment_status = 'success' THEN 1 ELSE 0 END) AS successful_count
+FROM invoices
+WHERE user_id = 1;
 
 
 
@@ -93,3 +78,6 @@ WHERE
 
 
 
+
+
+ 
