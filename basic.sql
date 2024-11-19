@@ -1,4 +1,4 @@
--- Active: 1728650081456@@127.0.0.1@3306@damo_rabbil_vai
+-- Active: 1730537862313@@127.0.0.1@3306@damo_rabbil_vai
 --- starting Rabbile vai ar class prectise 
 SELECT 'Hello world' as msg, 3+2 as sub, 3-2 as mai
 
